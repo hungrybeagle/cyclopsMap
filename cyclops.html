@@ -1,0 +1,63 @@
+<style>
+    #l1 {
+        position: absolute;
+        top: 102;
+        left: 131;
+        z-index: 4;
+        opacity: 0;
+    }
+    #l2 {
+        position: absolute;
+        top: 100;
+        left: 100;
+        z-index: 3;
+        opacity: 0.3;
+        
+    }
+    #l3 {
+        position: absolute;
+        top: 100;
+        left: 100;
+        z-index: 2;
+    }
+    #l4 {
+        position: absolute;
+        top: 100;
+        left: 100;
+        z-index: 1;
+    }
+
+</style>
+<div>
+    <input type="range" min="1" max="100" value="100" class="slider" id="s1"><br>
+    <input type="range" min="1" max="100" value="100" class="slider" id="s2"><br>
+    <input type="range" min="1" max="100" value="100" class="slider" id="s3"><br>
+    <input type="range" min="1" max="100" value="100" class="slider" id="s4"><br>
+    
+</div>
+<div id="l1">
+    <img src="c1.png">
+</div>
+<div id="l2">
+    <img src="c2.png">
+</div>
+<div id="l3">
+    <img src="c3.png">
+</div>
+<div id="l4">
+    <img src="c4.png">
+</div>
+<script>
+    document.getElementById("s1").onchange = function() {
+        e1 = document.getElementById("s1")
+        t = e1.value
+        console.log(t/100)
+        document.getElementById('l1').style.opacity = t/100
+    }
+    document.getElementById("s2").onchange = function() {
+        e1 = document.getElementById("s2")
+        t = e1.value
+        console.log(t/100)
+        document.getElementById('l2').style.opacity = t/100
+    }
+</script>
